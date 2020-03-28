@@ -13,7 +13,11 @@ Implementarea următorilor algoritmi de sortare:
 * Fără limită:
   * Merge Sort
   * Quick Sort
-  * Radix Sort (în baza 2, 10, 256)
+  * Radix Sort (în baza 2, 10, 256)  
+
+
+
+
 Codul se află în fișierul 'tema1.py'. După rulare se vor genera două fișiere, 'test.in' - care este șirul de numere pe care s-au testat sortările, și 'output-py.out', care va include timpii algoritmilor și șirul sortat pentru fiecare algoritm. De asemenea, sortările implementate de mine sunt comparate și cu cele din limbaj.
 
 
