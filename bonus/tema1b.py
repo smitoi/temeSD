@@ -129,7 +129,7 @@ def quick_sort_mo3(array, left, right):
 # COUNT SORT O(n)
 def count_sort(array, maxim):
     if (maxim > 1000000):
-        return 
+        return ;
     count = [0] * maxim;
     rez = [0] * len(array)
 
@@ -193,7 +193,7 @@ def create_maxHeap(array, index, length):
     
 def heap_sort(array):
     if len(array) > 3000:
-        return ;
+        return 
     for index in range(len(array) - 1, -1, -1):
         create_maxHeap(array, index, len(array))
     for index in range(len(array) - 1, 0, -1): 
@@ -338,6 +338,7 @@ def testare_sortari(numar, maxim):
         ofile.write(str(elemente) + '\n')
     ofile.close()
 if __name__ == "__main__":
-    numar_de_elemente = input("Numărul maxim de elemente este: ")
-    valoare_maxima_elemente = input("Valoarea maxima pe care o pot lua elementele este: ")
-    testare_sortari(int(numar_de_elemente), int(valoare_maxima_elemente))
+    if (len(sys.argv) != 3):
+        print ('Usage: python ' + str(sys.argv[0]) + ' <no. of elements> <maximum value of elements>')
+    else:
+        testare_sortari(int(sys.argv[1]), int(sys.argv[2]))
