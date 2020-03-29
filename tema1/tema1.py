@@ -6,7 +6,7 @@ from random import shuffle
 
 # BUBBLE SORT O(n^2)
 def bubble_sort(array):
-    if len(array) > 3000:
+    if len(array) > 5000:
         return 
     for index in range(len(array)):
         for jndex in range(index + 1, len(array)):
@@ -15,8 +15,8 @@ def bubble_sort(array):
 
 # INSERTION SORT O(n^2)
 def insertion_sort(array):
-    if len(array) > 3000:
-        return 
+    if len(array) > 7000:
+        return
     for index in range(1, len(array)):
         valueInsert = array[index]
         jndex = index
@@ -28,7 +28,7 @@ def insertion_sort(array):
 
 # SELECTION SORT O(n^2)
 def selection_sort(array):
-    if len(array) > 3000:
+    if len(array) > 7000:
         return 
     for index in range(len(array)):
         minim = index
@@ -72,25 +72,28 @@ def merge_sort(array):
         return inter_class(left, right)
 
 # QUICK SORT cu mediana elementul de la final - O(n*logn)
-def partition_end(array, left, right):
-    index = left - 1
+def quick_sort_end(array):
+    if len(array) <= 1:
+        return array
+    pivot = array[len(array) - 1]
+    lower = list()
+    equal = list()
+    greater = list()
+    
+    for element in array:
+        if element < pivot:
+            lower.append(element)
+        elif element == pivot:
+            equal.append(element)
+        else: 
+            greater.append(element)
 
-    for jndex in range(left, right):
-        if array[jndex] < array[right]:
-            index += 1
-            array[index], array[jndex] = array[jndex], array[index]
-
-    array[index + 1], array[right] = array[right], array[index + 1]
-    return (index + 1)
-
-def quick_sort_end(array, left, right):
-    if (left < right):
-        poz = partition_end(array, left, right)
-        quick_sort_end(array, left, poz - 1)
-        quick_sort_end(array, poz + 1, right)
+    return (quick_sort_end(lower) + equal + quick_sort_end(greater))
 
 # QUICK SORT cu mediana din trei - O(n*logn)
-def median_of_three(array, left, right):
+def median_of_three(array):
+    left = 0
+    right = len(array) - 1
     mid = (left + right) // 2;
     
     if (array[left] > array[right]):
@@ -101,30 +104,23 @@ def median_of_three(array, left, right):
         array[mid], array[right] = array[right], array[mid]
     return array[mid]
 
-def partition(array, left, right):
-    index = left - 1
-    jndex = right + 1
-    pivot = median_of_three(array, left, right)
+def quick_sort_mo3(array):
+    if len(array) <= 1:
+        return array
+    pivot = median_of_three(array)
+    lower = list()
+    equal = list()
+    greater = list()
     
-    while (index < jndex):
-        index += 1
-        while (array[index] < pivot):
-            index += 1
-        
-        jndex -= 1
-        while (array[jndex] > pivot):
-            jndex -= 1;
-        
-        if (index < jndex):
-            array[index], array[jndex] = array[jndex], array[index]
-    
-    return jndex
+    for element in array:
+        if element < pivot:
+            lower.append(element)
+        elif element == pivot:
+            equal.append(element)
+        elif element > pivot: 
+            greater.append(element)
 
-def quick_sort_mo3(array, left, right):
-    if (left < right):
-        poz = partition(array, left, right)
-        quick_sort_mo3(array, left, poz)
-        quick_sort_mo3(array, poz + 1, right)
+    return (quick_sort_mo3(lower) + equal + quick_sort_mo3(greater))
 
 # COUNT SORT O(n)
 def count_sort(array, maxim):
@@ -192,7 +188,7 @@ def create_maxHeap(array, index, length):
         create_maxHeap(array, right, length)
     
 def heap_sort(array):
-    if len(array) > 3000:
+    if len(array) > 5000:
         return ;
     for index in range(len(array) - 1, -1, -1):
         create_maxHeap(array, index, len(array))
@@ -230,7 +226,6 @@ def cocktail_sort(array):
 
 # PANCAKE SORT
 def flip(array, start, stop):
-    
     while (start < stop):
         array[start], array[stop] = array[stop], array[start]
         start += 1
@@ -270,38 +265,38 @@ def isSorted(array):
     return True
 
 
-def testare_sortari(numar, maxim):
-    sortari = ('.sort()', 'sorted()', 'Bubble sort', 'Insertion sort', 'Selection sort', 'Merge sort', 
-                'Quick sort (mediana final)', 'Quick sort (mediana din trei)', 'Count sort', 'Radix sort baza 10', 
-                'Radix sort baza 2', 'Radix sort baza 256', 'Heap sort', 'Cocktail sort', 'Pancake sort')
+def testare_sortari(numar, minim, maxim, nrTest):
+    sortari = ('Bubble sort', 'Insertion sort', 'Selection sort', 'Merge sort', 'Quick sort (mediana final)', 
+                'Quick sort (mediana din trei)', 'Count sort', 'Radix sort baza 10', 
+                'Radix sort baza 2', 'Radix sort baza 256', 'Heap sort', 'Cocktail sort', 'Pancake sort',
+                '.sort()', 'sorted()')
     print ('Sortam ' + str(numar) + ' elemente cu valori între 0 și ' + str(maxim))
     elemente_random = list()
     
     seed(time())
     for index in range(numar):
-        elemente_random.append(randint(0, maxim))
+        elemente_random.append(randint(minim, maxim))
 
-    file = open('test.in', 'w')
+    file = open('test' + str(nrTest) + '.in', 'w')
+    file.write('Nr. elemente = ' + str(numar) + '; Interval al valorilor elementelor: [' + str(minim) + ', ' + str(maxim) + ']\n')
     for index in range(numar):
         file.write(str(elemente_random[index]))
         if index != (numar - 1):
             file.write(' ')
     file.close()
     
-    ofile = open('output-py.out', 'w')
+    ofile = open('output-py' + str(nrTest) +'.out', 'w')
+    ofile.write('Testul nr. ' + str(nrTest) + ', avem ' + str(numar) + ' elemente din intervalul ' +
+    '[' + str(minim) + ', ' + str(maxim) + ']\n')
     for name in sortari:
-        file = open('test.in', 'r')
+        file = open('test' + str(nrTest) + '.in', 'r')
+        elemente = file.readline()
         elemente = file.readline()
         elemente = elemente.split(' ')
-        elemente.pop()
         elemente = [int(x) for x in elemente]
         file.close()
         startTime = time()
-        if (name == '.sort()'):
-            elemente.sort()
-        elif (name == 'sorted()'):
-            elemente = sorted(elemente)
-        elif (name == 'Bubble sort'):
+        if (name == 'Bubble sort'):
             bubble_sort(elemente)
         elif (name == 'Insertion sort'):
             insertion_sort(elemente)
@@ -310,9 +305,9 @@ def testare_sortari(numar, maxim):
         elif (name == 'Merge sort'):
             elemente = merge_sort(elemente)
         elif (name == 'Quick sort (mediana final)'):
-            quick_sort_end(elemente, 0, len(elemente) - 1)
+            elemente = quick_sort_end(elemente)
         elif (name == 'Quick sort (mediana din trei)'):
-            quick_sort_mo3(elemente, 0, len(elemente) - 1)
+            elemente = quick_sort_mo3(elemente)
         elif (name == 'Count sort'):
             maxim = elementMaxim(elemente)
             count_sort(elemente, maxim)
@@ -328,16 +323,33 @@ def testare_sortari(numar, maxim):
             cocktail_sort(elemente)
         elif (name == 'Pancake sort'):
             pancake_sort(elemente)
+        elif (name == '.sort()'):
+            elemente.sort()
+        elif (name == 'sorted()'):
+            elemente = sorted(elemente)
+
         endTime = time()
+
         if isSorted(elemente):
             print (name + ' a sortat elementele in ' + str(round(endTime - startTime, 3)))
             ofile.write (name + ' a sortat elementele in ' + str(round(endTime - startTime, 3)) + '\n')
         else:
             print (name + ': ERROR')
             ofile.write (name + ': ERROR\n')
-        ofile.write(str(elemente) + '\n')
+        
+        if (name == 'sorted()'):
+            ofile.write(str(elemente) + '\n')
     ofile.close()
 if __name__ == "__main__":
-    numar_de_elemente = input("Numărul maxim de elemente este: ")
-    valoare_maxima_elemente = input("Valoarea maxima pe care o pot lua elementele este: ")
-    testare_sortari(int(numar_de_elemente), int(valoare_maxima_elemente))
+    sys.setrecursionlimit(1500)
+    file = open('teste.in', 'r')
+    nrTeste = file.readline()
+    nrTeste.replace('\n', '')
+    nrTeste = int(nrTeste)
+    for index in range(1, nrTeste + 1):
+        citire = file.readline()
+        citire.replace('\n', '')
+        citire = citire.split(' ')
+        print ('Testul nr. ' + str(index))
+        testare_sortari(int(citire[0]), int(citire[1]), int(citire[2]), index)
+    
