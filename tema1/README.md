@@ -13,6 +13,7 @@ Implementarea următorilor algoritmi de sortare:
   * Merge Sort
   * Quick Sort
   * Radix Sort (în baza 2, 10, 256)
+
 Codul se află în fișierul 'tema1.py'. Testele se dau în fișierul 'teste.in' sub forma:
 ```
 <nr. teste n>
