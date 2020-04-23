@@ -72,25 +72,28 @@ def merge_sort(array):
         return inter_class(left, right)
 
 # QUICK SORT cu mediana elementul de la final - O(n*logn)
-def partition_end(array, left, right):
-    index = left - 1
+def quick_sort_end(array):
+    if len(array) <= 1:
+        return array
+    pivot = array[len(array) - 1]
+    lower = list()
+    equal = list()
+    greater = list()
+    
+    for element in array:
+        if element < pivot:
+            lower.append(element)
+        elif element == pivot:
+            equal.append(element)
+        else: 
+            greater.append(element)
 
-    for jndex in range(left, right):
-        if array[jndex] < array[right]:
-            index += 1
-            array[index], array[jndex] = array[jndex], array[index]
-
-    array[index + 1], array[right] = array[right], array[index + 1]
-    return (index + 1)
-
-def quick_sort_end(array, left, right):
-    if (left < right):
-        poz = partition_end(array, left, right)
-        quick_sort_end(array, left, poz - 1)
-        quick_sort_end(array, poz + 1, right)
+    return (quick_sort_end(lower) + equal + quick_sort_end(greater))
 
 # QUICK SORT cu mediana din trei - O(n*logn)
-def median_of_three(array, left, right):
+def median_of_three(array):
+    left = 0
+    right = len(array) - 1
     mid = (left + right) // 2;
     
     if (array[left] > array[right]):
@@ -101,30 +104,23 @@ def median_of_three(array, left, right):
         array[mid], array[right] = array[right], array[mid]
     return array[mid]
 
-def partition(array, left, right):
-    index = left - 1
-    jndex = right + 1
-    pivot = median_of_three(array, left, right)
+def quick_sort_mo3(array):
+    if len(array) <= 1:
+        return array
+    pivot = median_of_three(array)
+    lower = list()
+    equal = list()
+    greater = list()
     
-    while (index < jndex):
-        index += 1
-        while (array[index] < pivot):
-            index += 1
-        
-        jndex -= 1
-        while (array[jndex] > pivot):
-            jndex -= 1;
-        
-        if (index < jndex):
-            array[index], array[jndex] = array[jndex], array[index]
-    
-    return jndex
+    for element in array:
+        if element < pivot:
+            lower.append(element)
+        elif element == pivot:
+            equal.append(element)
+        elif element > pivot: 
+            greater.append(element)
 
-def quick_sort_mo3(array, left, right):
-    if (left < right):
-        poz = partition(array, left, right)
-        quick_sort_mo3(array, left, poz)
-        quick_sort_mo3(array, poz + 1, right)
+    return (quick_sort_mo3(lower) + equal + quick_sort_mo3(greater))
 
 # COUNT SORT O(n)
 def count_sort(array, maxim):
@@ -271,9 +267,9 @@ def isSorted(array):
 
 
 def testare_sortari(numar, maxim):
-    sortari = ('.sort()', 'sorted()', 'Bubble sort', 'Insertion sort', 'Selection sort', 'Merge sort', 
+    sortari = ('Bubble sort', 'Insertion sort', 'Selection sort', 'Merge sort', 
                 'Quick sort (mediana final)', 'Quick sort (mediana din trei)', 'Count sort', 'Radix sort baza 10', 
-                'Radix sort baza 2', 'Radix sort baza 256', 'Heap sort', 'Cocktail sort', 'Pancake sort')
+                'Radix sort baza 2', 'Radix sort baza 256', 'Heap sort', 'Cocktail sort', 'Pancake sort', '.sort()', 'sorted()')
     print ('Sortam ' + str(numar) + ' elemente cu valori între 0 și ' + str(maxim))
     elemente_random = list()
     
@@ -310,9 +306,9 @@ def testare_sortari(numar, maxim):
         elif (name == 'Merge sort'):
             elemente = merge_sort(elemente)
         elif (name == 'Quick sort (mediana final)'):
-            quick_sort_end(elemente, 0, len(elemente) - 1)
+            elemente = quick_sort_end(elemente)
         elif (name == 'Quick sort (mediana din trei)'):
-            quick_sort_mo3(elemente, 0, len(elemente) - 1)
+            elemente = quick_sort_mo3(elemente)
         elif (name == 'Count sort'):
             maxim = elementMaxim(elemente)
             count_sort(elemente, maxim)
@@ -335,8 +331,10 @@ def testare_sortari(numar, maxim):
         else:
             print (name + ': ERROR')
             ofile.write (name + ': ERROR\n')
-        ofile.write(str(elemente) + '\n')
+        if (name == 'sorted()'):
+            ofile.write(str(elemente) + '\n')
     ofile.close()
+
 if __name__ == "__main__":
     if (len(sys.argv) != 3):
         print ('Usage: python ' + str(sys.argv[0]) + ' <no. of elements> <maximum value of elements>')

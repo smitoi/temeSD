@@ -472,8 +472,9 @@ int		main(int	argc, char*		argv[])
 			std :: cout << sortari[index] << " ERROR" << '\n';
 			output << sortari[index] << " ERROR" << '\n';
 		}
-		for (std :: size_t jndex = 0; jndex < array.size(); ++jndex)
-			output << array[jndex] << ' ';
+		if (index == 12)
+			for (std :: size_t jndex = 0; jndex < array.size(); ++jndex)
+				output << array[jndex] << ' ';
 		output << '\n';
 		array.clear();
 	}
