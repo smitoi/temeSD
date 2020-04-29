@@ -19,6 +19,6 @@ Implementarea Fibonacci Heap în Python cu operațiile:
   * extragere-minim + returnarea nodului minim
   * merge între două heap-uri
 
-[Bonus](https://github.com/smitoi/temeSD/tree/master/bonus): 
+##[Bonus](https://github.com/smitoi/temeSD/tree/master/bonus): 
   * Am implementat sortările și în C++ ca exercițiu, dar și pentru a compara viteza dintre C++ și Python. Ele pot fi rulate împreună rulând fișierul 'execute_sorts.bat'.
   * Am implementat Fibonacci Heap și în C++, dar este instabilă și nu-mi dau seama de ce. + o parte din cod este preluat de pe Geeks4Geeks
