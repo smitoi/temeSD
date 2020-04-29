@@ -18,10 +18,10 @@ Codul se află în fișierul 'tema2.py'. Testele se dau în fișierul 'input.txt
 (doar operațiile care au valoare necesită și numărul suplimentar)
 
 Operații:
-	* 1 - inserare valoare
-    * 2 - ștergere valoare
-    * 3 - afișare minim
-    * 4 - șterge minim
+ * 1 - inserare valoare
+ * 2 - ștergere valoare
+ * 3 - afișare minim
+ * 4 - șterge minim
 
 Observații:
 * Am aflat că Fibonacci Heap rulează bine în teorie, dar în practică poate fi și de două ori mai slab decât un Min-Max Heap 😮 
