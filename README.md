@@ -12,7 +12,7 @@ Implementarea unor algoritmi de sortare:
  * Quick Sort
  * Radix Sort (în baza 2, 10, 256)
 
-## [Tema 12](https://github.com/smitoi/temeSD/tree/master/tema2)
+## [Tema 2](https://github.com/smitoi/temeSD/tree/master/tema2)
 Implementarea Fibonacci Heap în Python cu operațiile:
   * insert (valoare)
   * delete (valoare)
