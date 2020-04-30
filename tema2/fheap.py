@@ -48,7 +48,6 @@ class fheap:
             self.left = None
             self.right = None
             self.degree = 0
-            self.mark = False
 
     # Put node n between l and r
     def putBetween(self, l, n, r):
@@ -218,7 +217,6 @@ class fheap:
         n.left = n.right = n
         self.putChildList(m, n)
         m.degree += 1
-        n.mark = False
         n.up = m
     
     # Prints the root node list
