@@ -167,7 +167,6 @@ class fheap:
             self.extractMin()
         else:
             n = self.find_(self.min_root, val)
-            print ("CEVA: " + str(n.key))
             if (n.right != n):
                 if (n.up != None and n.down != None):
                     self.putBetween(n.left, n.down, n.right)
