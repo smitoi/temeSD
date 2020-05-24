@@ -30,8 +30,8 @@
 	* [x] 3p - [Dominoes - dominoes.py](https://csacademy.com/contest/archive/task/dominoes/statement/) (queue)
 	* [ ] 5p - [Interesting Array - interesting-array.py](https://codeforces.com/problemset/problem/482/B)
 	* [ ] 3p - [Kefa and Company - kefa&company.py](https://codeforces.com/problemset/problem/580/B)
-	* [ ] 3p - [Patrate3](https://www.infoarena.ro/problema/patrate3
-	* [x] 1p - [Blat - blat.py] (FMI No Stress)
+	* [ ] 3p - [Patrate3 - patrate3.cpp](https://www.infoarena.ro/problema/patrate3)
+	* [x] 1p - [Blat - blat.py](https://infoarena.ro/problema/blat) (FMI No Stress)
 	* Încercate în timpul FMI No Stress 9 - Freakadebunic, PermutariAB, Covrigi
 	* Încercate în timpul FMI No Stress Warm-up - Vampir, Ași
 
