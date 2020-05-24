@@ -50,4 +50,4 @@
 
 	
 	
-####Notă: Le-am implementat pe cele care mi-au permis în Python.
+#### Notă: Le-am implementat pe cele care mi-au permis în Python.
