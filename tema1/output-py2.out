@@ -1,0 +1,16 @@
+Testul nr. 2, avem 1000 elemente din intervalul [0, 10000]
+Bubble sort a sortat elementele in 0.084
+Insertion sort a sortat elementele in 0.055
+Selection sort a sortat elementele in 0.048
+Merge sort a sortat elementele in 0.005
+Quick sort (mediana final) a sortat elementele in 0.001
+Quick sort (mediana din trei) a sortat elementele in 0.002
+Count sort a sortat elementele in 0.002
+Radix sort baza 10 a sortat elementele in 0.003
+Radix sort baza 2 a sortat elementele in 0.01
+Radix sort baza 256 a sortat elementele in 0.001
+Heap sort a sortat elementele in 0.102
+Cocktail sort a sortat elementele in 0.101
+Pancake sort a sortat elementele in 0.081
+.sort() a sortat elementele in 0.0
+sorted() a sortat elementele in 0.0

@@ -270,7 +270,7 @@ def testare_sortari(numar, minim, maxim, nrTest):
                 'Quick sort (mediana din trei)', 'Count sort', 'Radix sort baza 10', 
                 'Radix sort baza 2', 'Radix sort baza 256', 'Heap sort', 'Cocktail sort', 'Pancake sort',
                 '.sort()', 'sorted()')
-    print ('Sortam ' + str(numar) + ' elemente cu valori între 0 și ' + str(maxim))
+    print ('Sortam ' + str(numar) + ' elemente cu valori între ' + str(minim) + ' și ' + str(maxim))
     elemente_random = list()
     
     seed(time())
@@ -337,8 +337,8 @@ def testare_sortari(numar, minim, maxim, nrTest):
             print (name + ': ERROR')
             ofile.write (name + ': ERROR\n')
         
-        if (name == 'sorted()'):
-            ofile.write(str(elemente) + '\n')
+        #if (name == 'sorted()'):
+            #ofile.write(str(elemente) + '\n')
     ofile.close()
 if __name__ == "__main__":
     sys.setrecursionlimit(1500)
