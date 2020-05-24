@@ -47,7 +47,4 @@
 * Problemele în C++ au fost compilate cu 'g++ -std=c++11'
 * Problemele în Python au fost rulate cu Python 3.7+
 * clear-folder.bat va șterge fișierele .in, .out și .exe
-
-	
-	
-#### Notă: Le-am implementat pe cele care mi-au permis în Python.
+* Le-am implementat pe cele care mi-au permis în Python (pe site-urile unde Python nu este FOARTE EXPERIMENTAL).
