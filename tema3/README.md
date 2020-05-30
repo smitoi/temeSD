@@ -14,7 +14,7 @@
 * #### Liste, Stive, Cozi, Deque, Hashuri (31p / max 25p) ✔️
 	* [x] 3p - [Alibaba - alibaba.cpp](https://www.infoarena.ro/problema/alibaba) (stack + greedy)
 	* [x] 5p - [Queue - queue.cpp](https://www.infoarena.ro/problema/queue) (două stack-uri)
-	* [x] 3p - [Hotelier - hotelier.cpp] (https://codeforces.com/problemset/problem/1200/A) (mergem stânga dreapta într-un vector)
+	* [x] 3p - [Hotelier - hotelier.cpp](https://codeforces.com/problemset/problem/1200/A) (mergem stânga dreapta într-un vector)
 	* [x] 3p - [Muzica - muzica.cpp](https://www.infoarena.ro/problema/muzica) (unordered map - 70p)
 	* [x] 4p - [Vila 2 - vila2.cpp](https://www.infoarena.ro/problema/vila2) (două deque-uri)
 	* [x] 4p - [Anagrams - anagrams.py](https://csacademy.com/contest/archive/task/anagrams/statement/) (sortăm cuvântul + dicționar)
@@ -43,7 +43,7 @@
 
 
 ##### Observații:
-* Trebuie create fișiere de intrare (de obicei e <numele-problemei>.in) pentru cele de pe InfoArena.
+* Trebuie create fișiere de intrare (de obicei e <i>numele-problemei</i>.in) pentru cele de pe InfoArena.
 * Problemele în C++ au fost compilate cu 'g++ -std=c++11'
 * Problemele în Python au fost rulate cu Python 3.7+
 * clear-folder.bat va șterge fișierele .in, .out și .exe
