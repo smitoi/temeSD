@@ -16,27 +16,27 @@
 	* [x] - 5p [Queue - queue.cpp](https://www.infoarena.ro/problema/queue) (două stack-uri)
 	* [x] - 3p [Hotelier - hotelier.cpp](https://codeforces.com/problemset/problem/1200/A) (mergem stânga dreapta într-un vector)
 	* [x] - 3p [Muzica - muzica.cpp](https://www.infoarena.ro/problema/muzica) (unordered map - 70p)
-	* [x] - 4p - [x] [Vila 2 - vila2.cpp](https://www.infoarena.ro/problema/vila2) (două deque-uri)
-	* [x] - 4p - [x] [Anagrams - anagrams.py](https://csacademy.com/contest/archive/task/anagrams/statement/) (sortăm cuvântul + dicționar)
-	* [x] - 4p - [x] [Paranteze - paranteze.cpp](https://www.infoarena.ro/problema/paranteze) (stack cu paranteze + indecșii)
-	* [x] - 5p - [x] [Sereja and Suffixes - seraja&suffixes.cpp](https://codeforces.com/problemset/problem/368/B) (set + parcurgere)
+	* [x] - 4p [Vila 2 - vila2.cpp](https://www.infoarena.ro/problema/vila2) (două deque-uri)
+	* [x] - 4p [Anagrams - anagrams.py](https://csacademy.com/contest/archive/task/anagrams/statement/) (sortăm cuvântul + dicționar)
+	* [x] - 4p [Paranteze - paranteze.cpp](https://www.infoarena.ro/problema/paranteze) (stack cu paranteze + indecșii)
+	* [x] - 5p [Sereja and Suffixes - seraja&suffixes.cpp](https://codeforces.com/problemset/problem/368/B) (set + parcurgere)
 	
 * #### Diverse (22p / max 25 p - 8 probleme) 3️⃣
-	* [x] - 1p - [x] [Four X-tremes - four-x-tremes.py](https://csacademy.com/contest/interview-archive/task/four-x-tremes/)
-	* [x] - 2p - [x] [Array Intersection array_intersection.py](https://www.csacademy.com/contest/interview-archive/task/array-intersection/)
-	* [x] - 3p - [x] [Closest Pair - closest-pair.py](https://csacademy.com/contest/interview-archive/task/closest-pair/) (sortare + parcurgere de vector)
+	* [x] - 1p [Four X-tremes - four-x-tremes.py](https://csacademy.com/contest/interview-archive/task/four-x-tremes/)
+	* [x] - 2p [Array Intersection array_intersection.py](https://www.csacademy.com/contest/interview-archive/task/array-intersection/)
+	* [x] - 3p [Closest Pair - closest-pair.py](https://csacademy.com/contest/interview-archive/task/closest-pair/) (sortare + parcurgere de vector)
 	* [x] - 3p [Largest Concat Number - largest_concat_number.cpp](https://csacademy.com/contest/interview-archive/task/largest-concat-number/) (sortare custom)
 	* [x] - 3p [Bounded Offset Sorting - bounded-offset-sorting.py](https://csacademy.com/contest/interview-archive/task/Bounded-offset-sorting/) (heap)
 	* [x] - 3p [Dominoes - dominoes.py](https://csacademy.com/contest/archive/task/dominoes/statement/) (queue)
-	* [x] - 3p - [x] [Kefa and Company - kefa&company.py](https://codeforces.com/contest/580/problem/B) (deque cu indici + greedy)
-	* [x] - 3p - [x] [Patrate3 - patrate3.cpp](https://www.infoarena.ro/problema/patrate3) (clasă puncte, sort, căutăm celălalte puncte - 50p)
+	* [x] - 3p [Kefa and Company - kefa&company.py](https://codeforces.com/contest/580/problem/B) (deque cu indici + greedy)
+	* [x] - 3p [Patrate3 - patrate3.cpp](https://www.infoarena.ro/problema/patrate3) (clasă puncte, sort, căutăm celălalte puncte - 50p)
 	
-	* [x] - 1p - [x] Blat - blat.py (FMI No Stress)
+	* [x] - 1p Blat - blat.py (FMI No Stress)
 	* Încercate în timpul FMI No Stress 9 - Freakadebunic, PermutariAB, Covrigi
 	* Încercate în timpul FMI No Stress Warm-up - Vampir, Ași
 
 * #### Heap-uri, Arbori binari de căutare (13p / max 15p - două probleme) 2️⃣
-	* [x] - 7p - [x] [All BST Preorders - allbst.cpp](https://csacademy.com/contest/interview-archive/task/all-bst-preorders/)
+	* [x] - 7p [All BST Preorders - allbst.cpp](https://csacademy.com/contest/interview-archive/task/all-bst-preorders/)
 	* [x] - 6p [Proc2 - proc2.cpp](https://www.infoarena.ro/problema/proc2)
 
 * #### Arbori de intervale, RMQ (9p / max 15p - două probleme) 6️⃣
