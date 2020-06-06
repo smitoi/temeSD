@@ -53,7 +53,6 @@ ostream& operator<<(ostream& os, const point& p)
 }
 
 vector<point> v;
-set<point> s;
 point C, D;
 
 int	main()	
@@ -64,22 +63,20 @@ int	main()
 	{
 		f >> aux >> auy;
 		v.push_back(point(aux, auy));
-		s.insert(point(aux, auy));
 		n--;
 	}
 	sort(v.begin(), v.end());
 
 	for (int i = 0; i < v.size(); i++)
 		for (int j = i + 1; j < v.size(); j++)
-			if (v[j] > v[i])
-            {
-				aux = v[j].x - v[i].x;
-				auy = v[j].y - v[i].y;
-				C = point(v[i].x - auy, v[i].y + aux);
-				D = point(v[j].x - auy, v[j].y + aux);
-                if(s.find(C) != s.end() && s.find(D) != s.end())
-                   rez++;
-            }
+		{
+			aux = v[j].x - v[i].x;
+			auy = v[j].y - v[i].y;
+			C = point(v[i].x - auy, v[i].y + aux);
+			D = point(v[j].x - auy, v[j].y + aux);
+            if(find(v.begin(), v.end(), C) != v.end() && find(v.begin(), v.end(), D) != v.end())
+				rez++;
+		}
 	
     g << rez / 2;
     return 0;
