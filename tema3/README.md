@@ -8,11 +8,11 @@
 	* [x] - 3p [Căutare binară - cautbin.cpp](https://www.infoarena.ro/problema/cautbin) (cautare binară)
 	* [x] - 4p [Numarare triunghiuri - nrtri.cpp](https://www.infoarena.ro/problema/nrtri) (sortare)
 	* [x] - 4p [Vanya and Lanterns - vanya&lanterns.cpp](https://codeforces.com/problemset/problem/492/B) (sortare și diferență dintre elemente)
-	* [x] - 6p [Inv - inv.cpp](https://www.infoarena.ro/problema/inv) (merge sort + numărare)
-	* [x] - 10p [Drazil and Factorial - drazil&fact.cpp](https://codeforces.com/problemset/problem/515/C) (math, sortare)
+	* [x] - 6p [Inv - inv.cpp](https://www.infoarena.ro/problema/inv) (merge sort + numărare la fiecare interschimbare)
+	* [x] - 10p [Drazil and Factorial - drazil&fact.cpp](https://codeforces.com/problemset/problem/515/C) (matematică, sortare)
 
 * #### Liste, Stive, Cozi, Deque, Hashuri (31p / max 25p - 8 probleme) ✔️
-	* [x] - 3p [Alibaba - alibaba.cpp](https://www.infoarena.ro/problema/alibaba) (stack + greedy)
+	* [x] - 3p [Alibaba - alibaba.cpp](https://www.infoarena.ro/problema/alibaba) (stack + un fel de greedy)
 	* [x] - 5p [Queue - queue.cpp](https://www.infoarena.ro/problema/queue) (două stack-uri)
 	* [x] - 3p [Hotelier - hotelier.cpp](https://codeforces.com/problemset/problem/1200/A) (mergem stânga dreapta într-un vector)
 	* [x] - 3p [Muzica - muzica.cpp](https://www.infoarena.ro/problema/muzica) (unordered map - 70p)
@@ -40,8 +40,9 @@
 	* [x] - 6p [Proc2 - proc2.cpp](https://www.infoarena.ro/problema/proc2)
 
 * #### Arbori de intervale, RMQ (9p / max 15p - două probleme) 6️⃣
-	* [x] - 5p [Range Minimum Query (RmQ) - rmq.cpp](https://www.infoarena.ro/problema/rmq)
+	* [x] - 5p [Range Minimum Query (RmQ) - rmq.cpp](https://www.infoarena.ro/problema/rmq) (rmq simulat cu o matrice)
 	* [x] - 4p [Mit - mit.cpp](https://www.infoarena.ro/problema/mit) (rmq + modificare rmq - 40p)
+	* [ ] - 0p [Circular RMQ](https://codeforces.com/problemset/problem/52/C) (am încercat-o, dar m-a dovedit - nu am putut să fac citirea)
 
 ## Total: 94/105p
 
@@ -49,6 +50,6 @@
 * Trebuie create fișiere de intrare (de obicei e <numele-problemei>.in) pentru cele de pe InfoArena.
 * Problemele în C++ au fost compilate cu 'g++ -std=c++11'
 * Problemele în Python au fost rulate cu Python 3.7+
-* clear-folder.bat va șterge fișierele .in, .out și .exe	
+* clear-folder.bat va șterge fișierele .in, .out și .exe
 	
 ####Notă: Le-am implementat pe cele care mi-au permis în Python.
