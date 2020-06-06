@@ -41,10 +41,10 @@
 
 * #### Arbori de intervale, RMQ (9p / max 15p - două probleme) 6️⃣
 	* [x] - 5p [Range Minimum Query (RmQ) - rmq.cpp](https://www.infoarena.ro/problema/rmq) (rmq simulat cu o matrice)
-	* [x] - 4p [Mit - mit.cpp](https://www.infoarena.ro/problema/mit) (rmq + modificare rmq - 40p)
+	* [x] - 4p [Mit - mit.cpp](https://www.infoarena.ro/problema/mit) (rmq de la problema precendentă + modificare vectorul inițial și reconstruire rmq - 40p)
 	* [ ] - 0p [Circular RMQ](https://codeforces.com/problemset/problem/52/C) (am încercat-o, dar m-a dovedit - nu am putut să fac citirea cum trebuie, și m-am pierdut în indecși - era aceeași cu Mit, doar că aplicam operația fie pe intervalul [x, y], dacă x <= y, fie pe intervalul [x, n - 1], [0, y], dacă y > x)
 
-## Total: 94/105p
+## Total: 94/105p (25 + 25 + 22 + 13 + 9)
 
 ##### Observații:
 * Trebuie create fișiere de intrare (de obicei e <numele-problemei>.in) pentru cele de pe InfoArena.
@@ -52,4 +52,4 @@
 * Problemele în Python au fost rulate cu Python 3.7+
 * clear-folder.bat va șterge fișierele .in, .out și .exe
 	
-####Notă: Le-am implementat pe cele care mi-au permis în Python.
+#### Notă: Le-am implementat pe cele care mi-au permis în Python.
