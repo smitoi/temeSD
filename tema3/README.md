@@ -42,7 +42,7 @@
 * #### Arbori de intervale, RMQ (9p / max 15p - două probleme) 6️⃣
 	* [x] - 5p [Range Minimum Query (RmQ) - rmq.cpp](https://www.infoarena.ro/problema/rmq) (rmq simulat cu o matrice)
 	* [x] - 4p [Mit - mit.cpp](https://www.infoarena.ro/problema/mit) (rmq + modificare rmq - 40p)
-	* [ ] - 0p [Circular RMQ](https://codeforces.com/problemset/problem/52/C) (am încercat-o, dar m-a dovedit - nu am putut să fac citirea)
+	* [ ] - 0p [Circular RMQ](https://codeforces.com/problemset/problem/52/C) (am încercat-o, dar m-a dovedit - nu am putut să fac citirea cum trebuie, și m-am pierdut în indecși - era aceeași cu Mit, doar că aplicam operația fie pe intervalul [x, y], dacă x <= y, fie pe intervalul [x, n - 1], [0, y], dacă y > x)
 
 ## Total: 94/105p
 
