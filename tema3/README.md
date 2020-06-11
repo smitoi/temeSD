@@ -16,7 +16,7 @@
 	* [x] - 5p [Queue - queue.cpp](https://www.infoarena.ro/problema/queue) 
 	* [x] - 3p [Hotelier - hotelier.cpp](https://codeforces.com/problemset/problem/1200/A) 
 	* [x] - 3p [Muzica - muzica.cpp](https://www.infoarena.ro/problema/muzica) 
-	* [x] - 4p [Vila 2 - vila2.cpp](https://www.infoarena.ro/problema/vila2) (două deque-uri)
+	* [x] - 4p [Vila 2 - vila2.cpp](https://www.infoarena.ro/problema/vila2)
 	* [x] - 4p [Anagrams - anagrams.py](https://csacademy.com/contest/archive/task/anagrams/statement/) 
 	* [x] - 4p [Paranteze - paranteze.cpp](https://www.infoarena.ro/problema/paranteze) 
 	* [x] - 5p [Sereja and Suffixes - seraja&suffixes.cpp](https://codeforces.com/problemset/problem/368/B) 
