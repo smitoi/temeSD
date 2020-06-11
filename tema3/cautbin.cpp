@@ -3,7 +3,6 @@
 /// https://www.infoarena.ro/problema/cautbin
 
 using	namespace std;
-using namespace std::chrono; 
 
 long long int	v[100002];
 ifstream	f("cautbin.in");
@@ -78,10 +77,7 @@ long long int	cautbin()
 
 int	main()
 {
-	ios_base::sync_with_stdio(false); 
-    cin.tie(NULL); 
 	f >> n;
-	//auto start = high_resolution_clock::now(); 
 
 	
 	for (register long long int index = 0; index < n; index++)
@@ -96,10 +92,5 @@ int	main()
 		g << cautbin() << '\n';
 	}
 
-	/*
-	auto stop = high_resolution_clock::now(); 
-	auto duration = duration_cast<microseconds>(stop - start); 
-	cout << '\n' << "Time taken by function: " << duration.count() << " microseconds" << '\n'; 
-	*/
 	return	0;
 }

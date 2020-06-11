@@ -11,9 +11,9 @@ while dr < n:
     if (suma > k):
         st += 1
     else:
-        dom = nums[dr] - nums[st] + 1
+        dom = nums[dr] - nums[st]
         if (dom + k - suma > maxim):
             maxim = dom + k - suma
         dr += 1
         
-print (maxim)
+print (maxim + 1)

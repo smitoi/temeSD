@@ -10,10 +10,7 @@ ofstream	g("nrtri.out");
 
 long int		n, v[801], nr;
 int	main()
-	
 {
-	ios_base::sync_with_stdio(false); 
-    cin.tie(NULL);
 
 	nr = 0;
 	f >> n;

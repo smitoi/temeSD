@@ -19,7 +19,7 @@ int main()
 
     for(int i = 0; i < m; i++)
     {
-        f >> st >> dr;
+        f >> st >> fi;
         while(!tasks.empty() && st >= tasks.top().first)
 		{
             proces.push(tasks.top().second);

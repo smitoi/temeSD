@@ -14,8 +14,6 @@ int maxim;
 	
 int main()
 {
-	
-
 	f >> n;
 	f >> s;
 	maxim = 0;

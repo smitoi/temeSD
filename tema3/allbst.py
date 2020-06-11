@@ -15,10 +15,13 @@ def preorder(root):
 def arbori(st, fi):
     arb = list()
     
+    
     if (st > fi):
         arb.append(None)
         return arb
-    
+    elif (st == fi):
+        return [nod(st, None, None)]
+
     for i in range(st, fi + 1):
         arbSt = arbori(st, i - 1)
         arbDr = arbori(i + 1, fi)

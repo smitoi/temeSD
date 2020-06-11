@@ -1,12 +1,13 @@
 #include <bits/stdc++.h> 
-     
+
+// https://codeforces.com/problemset/problem/515/C
 using namespace std;
      
 char s[100];
 char o[100];
 int		n;
 int		j = 0;
-     
+
 int main()
 {
     cin >> n;
